@@ -3,6 +3,7 @@ A module for controlling your mediaplayer (mainly spotify, but others might work
 misses a lot of functionality, but it´s a work in progress.
 
 Todo list:
+	
 	Add OAuth authentication to search spotify. 
 	Needed to see personal settings, what is included in a playlist etc.
 
