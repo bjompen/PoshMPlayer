@@ -33,7 +33,7 @@
 #>
 function Send-VirtualKeyboard
 {
-    [cmdletbinding(DefaultParameterSetName=’action’)]
+    [cmdletbinding(DefaultParameterSetName='action')]
     [Alias('vkey')]
     [OutputType([void])]
     Param
@@ -145,7 +145,7 @@ function PlaySpotify
         public static extern bool SetForegroundWindow(IntPtr hWnd);
         }
 "@
-    $PoshWindow = (Get-Process –id $pid).MainWindowHandle
+    $PoshWindow = (Get-Process -id $pid).MainWindowHandle
     [FgWindow]::SetForegroundWindow((Get-Process -Name spotify | Where-Object {[int]$($_.MainWindowHandle) -gt 1 } | Select-Object -First 1 -ExpandProperty MainWindowHandle)) | out-null
     vkey -key 0x0D
     Start-Sleep -Seconds 1
